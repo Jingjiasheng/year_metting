@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Datareachable-2023</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="table.css" />
+    <link rel="stylesheet" href="switch.css" />
+  </head>
+  <body>
+    <!-- 功能页面，默认隐藏 -->
+    <div id="settings">
+      <div id="add">
+        <div id="title-setting">
+          <h3>标题信息登记</h3>
+          <div id="txtb">
+            <!-- <label for="">标题名称:</label> -->
+            <input id="title_input" type="text" placeholder="请输入标题名称" />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">LOGO链接:</label> -->
+            <input id="logo_input" type="text" placeholder="请输入LOGO链接" />
+          </div>
+          <span id="btn" onclick="save_title()">提交</span>
+          <span id="btn" onclick="reset_title_input()">重置</span>
+        </div>
+
+        <div id="employee-setting">
+          <h3>员工信息登记</h3>
+          <div id="txtb">
+            <!-- <label for="">姓名:</label> -->
+            <input id="emlye_name_input" type="text" placeholder="请输入姓名" />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">头像:</label> -->
+            <input
+              id="emlye_avatar_input"
+              type="email"
+              placeholder="请输入头像地址"
+            />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">手机:</label> -->
+            <input
+              id="emlye_phone_input"
+              type="text"
+              placeholder="请输入手机号码"
+            />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">工号:</label> -->
+            <input
+              id="emlye_id_input"
+              type="text"
+              placeholder="请输入员工工号"
+            />
+          </div>
+          <span id="btn" onclick="add_employee()">提交</span>
+          <span id="btn" onclick="reset_employee_input()">清空</span>
+        </div>
+
+        <div id="gift-setting">
+          <h3>奖品信息登记</h3>
+          <div id="txtb">
+            <!-- <label for="">奖品名称:</label> -->
+            <input
+              id="prize_name_input"
+              type="text"
+              placeholder="请输入奖品名称"     
+            />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">奖品图片:</label> -->
+            <input
+              id="prize_img_url_input"
+              type="text"
+              placeholder="请输入奖品图片链接"
+            />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">奖品数量:</label> -->
+            <input
+              id="prize_count_input"
+              type="text"
+              placeholder="请输入奖品数量"
+            />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">奖品等级:</label> -->
+            <input
+              id="prize_level_input"
+              type="text"
+              placeholder="请输入奖品等级"
+            />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">奖品价格:</label> -->
+            <input
+              id="prize_prise_input"
+              type="text"
+              placeholder="请输入奖品价格"
+            />
+          </div>
+          <div id="txtb">
+            <!-- <label for="">奖品详情:</label> -->
+            <textarea
+              id="prize_detail_input"
+              name=""
+              placeholder="请输入奖品详情"
+            ></textarea>
+          </div>
+          <span id="btn" onclick="add_prize()">提交</span>
+          <span id="btn" onclick="reset_prize_input()">重置</span>
+        </div>
+
+        <div id="zhuanpan-setting">
+          <h3>转盘参数设置</h3>
+          <span id="btn" onclick="save_title()">提交</span>
+          <span id="btn" onclick="reset_zhuanpan_input()">重置</span>
+        </div>
+      </div>
+
+      <div id="show">
+        <div id="title-show">
+          <h1 id="title-content1">标题名称： Datareachable-2022年度抽奖晚会</h1>
+        </div>
+
+        <div id="gift-show">
+          <table id="style-table">
+            <thead>
+              <tr>
+                <th>奖品名称</th>
+                <th>奖品图片</th>
+                <th>奖品数量</th>
+                <th>奖品价格</th>
+                <th>奖品等级</th>
+                <th>奖品详情</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="prizes-tbody"></tbody>
+          </table>
+        </div>
+
+        <div id="employee-show">
+          <table id="style-table">
+            <thead>
+              <tr>
+                <th>头像</th>
+                <th>姓名</th>
+                <th>工号</th>
+                <th>电话</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="employees-tbody"></tbody>
+          </table>
+        </div>
+        <div id="zhuanpan-show">转盘设置</div>
+      </div>
+    </div>
+
+    <!-- 抽奖页面 -->
+    <div id="center">
+      <!-- 年会标题区 -->
+      <div id="title">
+        <div id="com-logo">
+          <img
+            id="com-logo-content"
+            src="https://obj.zr.si/bylcy/pub/datareachable/LOGO.png"
+          />
+        </div>
+        <h1 id="title-content2">Datareachable 2022年度晚会抽奖</h1>
+      </div>
+
+      <!-- 抽奖区 -->
+      <div id="lottery">
+        <!-- 奖品介绍区 -->
+        <div id="prize-info">
+          <div id="prize-img">
+            <img
+              src="https://m.media-amazon.com/images/I/61-PblYntsL._AC_SX355_.jpg"
+            />
+          </div>
+          <div id="prize-name">
+            <p>Nintendo Switch with Neon Blue and Neon Red Joy</p>
+          </div>
+          <div id="prize-price"><p>价值: 9999￥</p></div>
+          <div id="prize-count"><p>数量: x2</p></div>
+          <div id="prize-detail">
+            <p>
+              奖品详情: <br />&nbsp&nbsp&nbsp&nbsp任天堂Switch（英语：Nintendo
+              Switch，简称NS或Switch）是日本任天堂公司出品的電子遊戲機[5][6]，於2017年3月3日在日本、北美、歐洲和香港發售[7]，同年12月1日在韩国和台湾发售，2019年12月10日在中国大陆发售[8]。擁有可拆卸控制器和可分離式主機，遊戲載體使用了專用卡匣。主机處理器使用基於NVIDIATegra
+              X1的定制系统芯片，這也是任天堂首次採用NVIDIA的芯片[3]，同時也是任天堂首次採用ARM架構芯片。開發期中的主機於2015年3月17日以「NX」代號首次公佈，在2016年10月20日首次於網路影片上公開正式名稱任天堂Switch和其造型[9]。
+            </p>
+          </div>
+        </div>
+
+        <div id="zhuanpan-ctr">
+          <div id="start">
+            <input type="button" value="开始" />
+          </div>
+
+          <div id="manual">
+            <div class="switch">
+              <input type="checkbox" name="toggle" />
+              <label for="toggle"><i></i></label>
+              <span></span>
+            </div>
+            <div id="manual-label">手动模式</div>
+          </div>
+
+          <div id="manual">
+            <div class="switch">
+              <input type="checkbox" name="toggle" />
+              <label for="toggle"><i></i></label>
+              <span></span>
+            </div>
+            <div id="manual-label">抽中排除</div>
+          </div>
+
+          <!-- <div id='lottery-reset'>手动模式</div> -->
+        </div>
+
+        <div id="zhuanpan">
+          <div id="box">
+            <canvas id="c1" width="1500px" height="1500px"></canvas>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 中奖展示区 -->
+      <div id="winner-content">
+        <table id="style-table">
+          <thead>
+            <tr>
+              <th>头像</th>
+              <th>姓名</th>
+              <th>工号</th>
+              <th>电话</th>
+              <th>奖品名称</th>
+              <th>奖品等级</th>
+              <th>获奖时间</th>
+              <th>是否有效</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="winners-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="test_data.js"></script>
+<script src="index.js"></script>
+<script src="lottery.js"></script>
